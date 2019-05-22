@@ -1,0 +1,12 @@
+<div class="container">
+  <h1>Latest Articles</h1>
+  <% @article.each do  |article| %>
+  <h2 class="text text-danger"> <%= article.title %></h2>
+    <p class="text-info border text-center " >
+      <%= article.body %>
+
+    </p>
+    <%= link_to 'Detail View', article_path(article), class: 'link ml-5 text-center'%>
+  <%end %>
+  <%= link_to "create new Article", new_article_path, class: "text-center text-success"%>
+</div>
