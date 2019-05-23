@@ -1,0 +1,14 @@
+<h3>Leave some feedback</h3>
+
+<%= form_for [@article ,@comment ] do |f|%>
+
+  <p> <%= f.label :aurthor_namem, "Big Boss" %></p>
+  <p> <%= f.text_field :aurthor_name %></p>
+
+  <p> <%= f.label :body %></p>
+  <p> <%= f.text_field :body %></p>
+
+  <p>
+    <%= f.submit "submit" %>
+  </p>
+<%end %>

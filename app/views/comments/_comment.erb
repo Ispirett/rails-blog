@@ -1,0 +1,10 @@
+
+
+<div>
+<small>Posted <%=distance_of_time_in_words(comment.article.created_at, comment.created_at )  %></small>
+<h4> <%= comment.aurthor_name %> </h4>
+<p><%= comment.body %>   </p>
+  <p>
+    <%=  link_to  'delete ', article_comment_path(comment), method: :delete, data:{confirm: "are you sure you want to remove your comment"}, class: 'text-danger '%>
+  </p>
+</div>
