@@ -1,6 +1,12 @@
 <div class="container text-center">
   <h1>Article Details</h1>
   <h2><%= @article.title %> </h2>
-  <p> <%= @article.body %></p>
+  <h2> <%= @article.body %></h2>
+
+
+
+  <%= link_to "create new Article", new_article_path, class: "text-center text-success"%>
+  <%= link_to "edit your article ", edit_article_path(@article) %>
+  <%= link_to "delete" , article_path(@article), method: :delete, data: {confirrm: "Are you sure"} %>
 </div>
 
