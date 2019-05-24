@@ -1,6 +1,7 @@
 <div class="container text-center">
   <h1>Article Details</h1>
   <h2><%= @article.title %> </h2>
+  <p><%= image_tag  @article.image.url,  width: '1024' , class: "article-image" %></p>
   <h2> <%= @article.body %></h2>
 
 
