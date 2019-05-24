@@ -1,0 +1,8 @@
+<h1> select article by category</h1>
+
+<ul>
+  <% @tags.articles.each do |article| %>
+  <li><%= link_to article.title, article_path(article ) %></li>
+
+    <%end %>
+</ul>

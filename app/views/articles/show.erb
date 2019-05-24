@@ -12,7 +12,13 @@
 <h1><%= @article.comments.count %> Comments </h1>
 <%= render partial: 'comments/comment', collection: @article.comments %>
 <%= render partial: 'comments/form' %>
-
 <%= link_to "create new Article", new_article_path, class: "text-center text-success"%>
 <%= link_to "edit your article ", edit_article_path(@article) %>
 <%= link_to "delete" , article_path(@article), method: :delete ,data: {confirm: "Are you sure"} %>
+
+<%@article.tags.each do |tags| %>
+
+  <p>
+    <%= link_to tags.name, tag_path(tags) %>
+  </p>
+<%end %>

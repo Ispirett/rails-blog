@@ -1,0 +1,7 @@
+<h1>Find articles by tags</h1>
+<ul>
+<% @tags.each do |tag| %>
+  <l1>  <%= link_to tag.name, tag_path(tag) %></l1>
+    <li><%= link_to "delete",tag_path(tag), method: :delete, data:{confirm:"Are you sure?", class: "text text-danger"} %></li>
+  <%end%>
+</ul>
